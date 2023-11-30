@@ -7,13 +7,13 @@ class GovernmentType(Enum):
 
 class Country:
     def __init__(self, name: str = "", capital: str = "", code: int = 0, population: int = 1, area: float = 1.1, GDP: int = 1, government: GovernmentType = None):
-        self.name = name
-        self.capital = capital
+        self.__name = name
+        self.__capital = capital
         self.__code = code
         self.__population = population
         self.__area = area
         self.__GDP = GDP
-        self.government = government
+        self.__government = government
 
     def get_name(self):
         return f'Name: {self.name}'
@@ -79,7 +79,7 @@ def main(inst1, inst2, inst3):
     for x in (inst1, inst2, inst3):
         x.print_all()
 
-Country1 = Country("Ukraine", "Kiev", +380, 43000000, 603628, 2000000, GovernmentType.REPUBLIC)
+Country1 = Country("Ukraine", "Kyiv", +380, 43000000, 603628, 2000000, GovernmentType.REPUBLIC)
 Country2 = Country("Poland", "Warsaw", +48, 37000000, 322575, 150000000, GovernmentType.REPUBLIC)
 Country3 = Country("USA", "Washington", +1202, 331000000, 9834000, 0, GovernmentType.REPUBLIC)
 
