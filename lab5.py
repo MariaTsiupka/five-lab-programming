@@ -59,8 +59,8 @@ class Country:
         {self.get_population()}, {self.get_area()}, {self.get_GDP()}, {self.get_government()}'
 
     def __repr__(self):
-        return f'Country({self.name!r}, {self.capital!r}, {self.__code!r},
-        {self.__population!r}, {self.__area!r}, {self.__GDP!r}, {self.government!r})'
+        return f'Country({self.__name!r}, {self.__capital!r}, {self.__code!r},
+        {self.__population!r}, {self.__area!r}, {self.__GDP!r}, {self.__government!r})'
 
     def __del__(self):
         """
